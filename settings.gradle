@@ -1,0 +1,4 @@
+include ':library_b'
+include ':library_a'
+include ':app'
+rootProject.name = "transive-dagger-sample"
