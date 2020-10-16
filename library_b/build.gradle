@@ -26,10 +26,10 @@ android {
 }
 
 dependencies {
-    implementation project(":library_c")
+//    implementation project(":library_c")
 
-    api 'com.google.dagger:dagger:2.29.1'
-    kapt 'com.google.dagger:dagger-compiler:2.29.1'
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

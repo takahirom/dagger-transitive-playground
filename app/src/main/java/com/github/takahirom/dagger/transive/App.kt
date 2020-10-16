@@ -1,12 +1,14 @@
 package com.github.takahirom.dagger.transive
 
+import android.app.Application
 import com.github.takahirom.dagger.library_a.A
 import dagger.Component
+import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
 
-class App @Inject constructor(a: A)
+@HiltAndroidApp
+class App :Application(){
+    @Inject lateinit var a: A
 
-@Component
-interface ComponentApp {
-    fun app(): App
 }
+
